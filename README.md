@@ -27,12 +27,11 @@ Use a real [starter project](https://www.11ty.dev/docs/starter/) or a [beautiful
 - Added `robots.txt` using `robots.njk`
 
 ---
-Below is the the README for eleventy baseblog.
+Below is the the README for eleventy base blog the theme you should actually use.
 # eleventy-base-blog
 
 A starter repository showing how to build a blog with the [Eleventy](https://github.com/11ty/eleventy) static site generator.
 
-[![Build Status](https://travis-ci.org/11ty/eleventy-base-blog.svg?branch=master)](https://travis-ci.org/11ty/eleventy-base-blog)
 
 ## Demos
 
