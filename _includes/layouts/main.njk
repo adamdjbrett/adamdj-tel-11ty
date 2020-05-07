@@ -141,8 +141,8 @@
           {% include "../js/metadata.min.json" %}
         {% endset %}
         <!-- feed it through our jsmin filter to minify -->
-        <script>
-          {{ js | jsmin | safe }}
+        <script type="application/ld+json">
+          {{ js | safe }}
         </script>
         <!-- schema -->
     </body>
