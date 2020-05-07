@@ -1,6 +1,8 @@
 # Adam DJ Brett Contact Information
 [adamdj.tel](https://www.adamdj.tel)
 
+[![Build Status](https://travis-ci.org/adamdjbrett/adamdj-tel-11ty.svg?branch=master)](https://travis-ci.org/adamdjbrett/adamdj-tel-11ty)
+
 ⚠️ WARNING: This is an Educational Project, not ready for production!⚠️
 
 ## FAQ
