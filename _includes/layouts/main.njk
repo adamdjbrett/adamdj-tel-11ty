@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="{{site.og_locale}}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{ site.name }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="{{ site.description }}">
+        <link rel="canonical" href="{{ site.url }}">
+        {% if site.favicon_img %}
+        <link rel="shortcut icon" href="/favicon.ico" />
+        {% endif %}
+        {% set css %}
+          {% include "../css/main.css" %}
+        {% endset %}
+        <!-- feed it through our cssmin filter to minify -->
+        <style>
+          {{ css | cssmin | safe }}
+        </style>
+        <link rel="preload" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" as="style" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+    </head>
+    <body>
+        <div class="content">
+            {% if site.front_img %}
+            <img src="{{ site.front_img_path }}" id="fullscreen" alt="background">
+            {% endif %}
+
+            {% if site.avatar %}
+                <img src="{{ site.avatar_img_path }}" id="avatar" alt="{{ site.name }}'s avatar">
+            {% endif %}
+
+            <h1>{{ site.name }}</h1>
+            <h3>{{ site.description }}</h3>
+
+                <ul>
+                    {% if site.main_site_url %}
+                    <li><a class="fa fa-2x fa-globe" href="{{ site.main_site_url }}" title="{{site.name}}'s' main site"><span class="description">Main website</span></a></li>
+                    {% endif %}
+
+                    {% if site.github_username %}
+                    <li><a class="fa fa-2x fa-github" href="https://github.com/{{ site.github_username }}" title="Follow {{site.name}} on Github"><span class="description">GitHub</span></a></li>
+                    {% endif %}
+
+                    {% if site.codepen_username %}
+                    <li><a class="fa fa-2x fa-codepen" href="https://codepen.io/{{ site.codepen_username }}" title="Follow {{site.name}} on CodePen"><span class="description" >CodePen</span></a></li>
+                    {% endif %}
+
+                    {% if site.facebook_username %}
+                    <li><a class="fa fa-2x fa-facebook" href="https://facebook.com/{{ site.facebook_username }}" title="Follow {{site.name}} on Facebook"><span class="description">Facebook</span></a></li>
+                    {% endif %}
+
+                    {% if site.vk_username %}
+                    <li><a class="fa fa-2x fa-vk" href="https://vk.com/{{ site.vk_username }}" title="Follow {{site.name}} on VK"><span class="description">ВКонтакте</span></a></li>
+                    {% endif %}
+
+                    {% if site.twitter_username %}
+                    <li><a class="fa fa-2x fa-twitter" href="https://twitter.com/{{ site.twitter_username }}" title="Follow {{site.name}} on Twitter"><span class="description">Twitter</span></a></li>
+                    {% endif %}
+
+                    {% if site.linkedin_username %}
+                    <li><a class="fa fa-2x fa-linkedin" href="https://linkedin.com/in/{{ site.linkedin_username }}" title="Follow {{site.name}} on LinkedIn"><span class="description">LinkedIn</span></a></li>
+                    {% endif %}
+
+                    {% if site.instagram_username %}
+                    <li><a class="fa fa-2x fa-instagram" href="https://instagram.com/{{ site.instagram_username }}" title="Follow {{site.name}} on Instagram"><span class="description">Instagram</span></a></li>
+                    {% endif %}
+
+                    {% if site.flickr_usernmae %}
+                    <li><a class="fa fa-2x fa-flickr" href="https://flickr.com/photos/{{ site.flickr_username }}" title="Follow {{site.name}} on Flickr"><span class="description">Flickr</span></a></li>
+                    {% endif %}
+
+                    {% if site.steam_username %}
+                    <li><a class="fa fa-2x fa-steam" href="http://steamcommunity.com/id/{{ site.steam_username }}" title="Follow {{site.name}} on Steam"><span class="description">Steam</span></a></li>
+                    {% endif %}
+
+                    {% if site.soundcloud_username %}
+                    <li><a class="fa fa-2x fa-soundcloud" href="https://soundcloud.com/{{ site.soundcloud_username }}" title="Follow {{site.name}} on Soundcloud"><span class="description">Soundcloud</span></a></li>
+                    {% endif %}
+
+                    {% if site.lastfm_username %}
+                    <li><a class="fa fa-2x fa-lastfm" href="http://www.last.fm/user/{{ site.lastfm_username }}" title="Follow {{site.name}} on last dot fm"><span class="description">Last.fm</span></a></li>
+                    {% endif %}
+
+                    {% if site.stack_of_username %}
+                    <li><a class="fa fa-2x fa-stack-overflow" href="https://stackoverflow.com/users/{{ site.stack_of_username }}" title="Follow {{site.name}} on stack overflow"><span class="description">Stack OF</span></a></li>
+                    {% endif %}
+
+                    {% if site.reddit_username %}
+                    <li><a class="fa fa-2x fa-reddit" href="https://reddit.com/user/{{ site.reddit_username }}" title="Follow {{site.name}} on reddit"><span class="description">Reddit</span></a></li>
+                    {% endif %}
+
+                    {% if site.medium_username %}
+                    <li><a class="fa fa-2x fa-medium" href="https://medium.com/@{{ site.medium_username }}" title="Follow {{site.name}} on medium"><span class="description">Medium</span></a></li>
+                    {% endif %}
+
+                    {% if site.tumblr_username %}
+                    <li><a class="fa fa-2x fa-tumblr" href="https://{{ site.tumblr_username }}.tumblr.com/" title="Follow {{site.name}} on tumblr"><span class="description">Tumblr</span></a></li>
+                    {% endif %}
+
+                    {% if site.weibo_username %}
+                    <li><a class="fa fa-2x fa-weibo" href="https://weibo.com/{{ site.weibo_username }}" title="Follow {{site.name}} on weibo"><span class="description">微博</span></a></li>
+                    {% endif %}
+
+                    {% if site.blog_url %}
+                    <li><a class="fa fa-2x fa-tags" href="{{ site.baseurl }}{{ site.blog_url }}" title="Follow {{site.name}}'s blog"><span class="description">Blog</span></a></li>
+                    {% endif %}
+
+                    {% if site.email %}
+                    <li><a class="fa fa-2x fa-envelope" href="mailto:{{ site.email }}" title="email {{site.name}}"><span class="description">Email</span></a></li>
+                    {% endif %}
+
+                    {% if site.public_key_url %}
+                    <li><a class="fa fa-2x fa-key" href="{{ site.public_key_url }}" title="{{site.name}}'s public key"><span class="description">PGP Key</span></a></li>
+                    {% endif %}
+                </ul>
+
+        </div>
+        <footer><a href="http://11ty.dev" rel="noopener">Built with 11ty ❤️</a>.</footer>
+    </body>
+</html>
