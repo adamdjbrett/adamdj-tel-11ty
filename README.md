@@ -26,6 +26,7 @@ Use a real [starter project](https://www.11ty.dev/docs/starter/) or a [beautiful
 - Added `404.html` page and using [html5boilerplate.com](https://html5boilerplate.com/)
 - Added `robots.txt` using `robots.njk`
 - Built on github pages using [travis-ci](travis-ci.org)
+	- [Snook](https://snook.ca/archives/servers/deploying-11ty-to-gh-pages) has excellent for instructions on how to deploy Eleventy to Github Pages
 
 ---
 Below is the the README for eleventy base blog the theme you should actually use.
