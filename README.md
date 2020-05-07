@@ -25,6 +25,7 @@ Use a real [starter project](https://www.11ty.dev/docs/starter/) or a [beautiful
 		- [Load CSS asynchronously](https://github.com/filamentgroup/loadCSS/)
 - Added `404.html` page and using [html5boilerplate.com](https://html5boilerplate.com/)
 - Added `robots.txt` using `robots.njk`
+- Built on github pages using [travis-ci](travis-ci.org)
 
 ---
 Below is the the README for eleventy base blog the theme you should actually use.
