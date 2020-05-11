@@ -18,7 +18,7 @@
         {% if site.twitter %}<meta name="twitter:site" content="@{{ site.twitter_username }}">
         <meta name="twitter:creator" content="@{{ site.twitter_username }}">{% endif %}
         <!-- Open Graph -->
-        <meta property="og:locale" content="{{ site.og_locale }}">
+        <meta property="og:locale" content="en_US">
         <meta property="og:type" content="article">
         <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
         <meta property="og:description" content="{{ site.description }}">
@@ -26,7 +26,12 @@
         <meta property="fb:admins" content="adamdjbrett"/>
         <meta property="fb:app_id" content="138858296188819"/>
         <meta property="og:site_name" content="{{ site.name }}">
-        <meta property="og:image" content="{{ site.url }}{{ site.front_img_path }}" property="og:image:width" content="1920" property="og:image:height" content="1080"/>
+        <meta property="og:image" content="{{ site.url }}{{ site.front_img_path }}">
+        <meta property="og:image" content="http://example.com/ogp.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1920" />
+        <meta property="og:image:height" content="1080" />
+        <meta property="og:image:alt" content="Sunshining in a train yard" />
         {% set css %}
           {% include "../css/main.css" %}
         {% endset %}
