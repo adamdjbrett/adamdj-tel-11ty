@@ -3,7 +3,7 @@
   "description": "I am Ph.D. candidate in Critique, Image, Politics in the Department of Religion at Syracuse University where I am coding and decoding religion.",
   "url": "https://www.adamdj.tel",
   "baseurl": "",
-  "repo": "http://github.com/adamdjbrett/adamdj.tel",
+  "repo": "https://github.com/adamdjbrett/adamdj-tel-11ty",
   "comments": false,
   "author": {
     "name": "Adam DJ Brett"
