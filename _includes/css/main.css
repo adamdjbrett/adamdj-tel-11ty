@@ -1,6 +1,7 @@
+/* removed transparent background-color */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -42,12 +43,12 @@ h3 {
 .content {
     padding-top: 100px;
     padding-bottom: 200px;
-    background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
+    background-color: rgba(0, 0, 0, 0);
 }
 footer {
-  background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
+  background-color: rgba(0, 0, 0, 0);
 }
 ul {
     list-style: none;
