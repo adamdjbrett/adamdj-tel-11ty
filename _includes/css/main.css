@@ -47,11 +47,11 @@ h3 {
     padding-top: 100px;
     padding-bottom: 200px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0);
+    /* background-color: rgba(0, 0, 0, 0); */
 }
 footer {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0);
+  /* background-color: rgba(0, 0, 0, 0); */
 }
 ul {
     list-style: none;
