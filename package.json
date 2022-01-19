@@ -24,8 +24,8 @@
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "luxon": "^1.24.0",
-    "markdown-it": "^8.4.2",
-    "markdown-it-anchor": "^5.2.5"
+    "markdown-it": ">=12.3.2",
+    "markdown-it-anchor": "^8.0.0"
   },
   "dependencies": {
     "clean-css": "^4.2.3",
