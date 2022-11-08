@@ -87,7 +87,11 @@
                     {% endif %}
 
                     {% if site.instagram_username %}
-                    <li><a class="fa fa-2x fa-instagram" href="https://instagram.com/{{ site.instagram_username }}" title="Follow {{site.name}} on Instagram"><span class="description">Instagram</span></a></li>
+                    <li><a class="fa fa-2x fa-instagram" href="https://instagram.com{{ site.instagram_username }}" title="Follow {{site.name}} on Instagram"><span class="description">Instagram</span></a></li>
+                    {% endif %}
+
+                    {% if site.hcommons_username %}
+                    <li><a class="fa fa-2x fa-header" href="https://hcommons.social/{{ site.hcommons_username }}" title="Follow {{site.name}} on Humanities Commons Mastodon Social Network"><span class="description">Hcommons</span></a></li>
                     {% endif %}
 
                     {% if site.flickr_usernmae %}
