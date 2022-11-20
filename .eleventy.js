@@ -79,6 +79,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("favicon.ico");
+  eleventyConfig.addPassthroughCopy("vcard.vcf");
   eleventyConfig.addPassthroughCopy('.passthrough');
 
   /* Markdown Overrides */
