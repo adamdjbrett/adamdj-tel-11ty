@@ -103,6 +103,14 @@
                     <li><a class="fa fa-2x fa-header" href="https://hcommons.social/{{ site.hcommons_username }}" title="Follow {{site.name}} on Humanities Commons Mastodon Social Network"><span class="description">Hcommons</span></a></li>
                     {% endif %}
 
+                    {% if site.threads_username %}
+                    <li><a class="fa fa-2x fa-threads" href="https://threads.net/{{ site.treads_username }}" title="Follow {{site.name}} on threads"><span class="description">Threads</span></a></li>
+                    {% endif %}
+
+                    {% if site.bsky_username %}
+                    <li><a class="fa fa-2x fa-at" href="https://bsky.app/profile/{{ site.bsky_username }}" title="Follow {{site.name}} on bluesky"><span class="description">Bluesky</span></a></li>
+                    {% endif %}
+
                     {% if site.flickr_usernmae %}
                     <li><a class="fa fa-2x fa-flickr" href="https://flickr.com/photos/{{ site.flickr_username }}" title="Follow {{site.name}} on Flickr"><span class="description">Flickr</span></a></li>
                     {% endif %}
