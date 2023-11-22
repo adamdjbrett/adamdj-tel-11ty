@@ -1,23 +1,40 @@
 {
-  "@context": "https://schema.org/",
-  "@type": "Person",
+  "@context": "http://www.schema.org",
+  "@type": "person",
   "name": "Adam DJ Brett",
+  "jobTitle": "International Research Associate",
+  "height": "78 inches",
+  "gender": "male",
   "url": "https://www.adamdj.tel",
-  "image": "https://www.adamdj.tel/img/avatar.jpg",
   "sameAs": [
-    "https://facebook.com/adamdjbrett",
-    "https://twitter.com/__adjb",
-    "https://instagram.com/__adjb",
-    "",
-    "https://www.linkedin.com/in/adamdjbrett/",
-    "https://www.pinterest.com/adamdjbrett/",
-    "https://adjb.co",
-    "https://github.com/adamdjbrett",
-    "https://www.adamdjbrett.com"
+      "https://www.adamdjbrett.com",
+      "https://github.com/adamdjbrett",
+      "https://adjb.co",
+      "https://www.pinterest.com/adamdjbrett/",
+      "https://www.linkedin.com/in/adamdjbrett/",
+      "https://bsky.app/profile/adjb.bsky.social",
+      "https://instagram.com/__adjb",
+      "https://twitter.com/__adjb",
+      "https://facebook.com/adamdjbrett",
+      "https://hcommons.social/@adjb"
   ],
-  "jobTitle": "Ph.D. Candidate in Religion",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Syracuse University"
-  }
+  "image": "https://www.adamdj.tel/img/avatar.jpg",
+  "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "United States"
+  },
+  "email": "adam@adamdjbrett",
+  "alumniOf": [
+      "Syracuse University",
+      "Brite Divinity School",
+      "Texas Christian University"
+  ],
+  "colleague": [
+      "https://stephaniewyatt.net/",
+      "http://aila.ngo/",
+      "https://indigenousvalues.org/",
+      "https://jewishphilosophyplace.com/",
+      "https://eileencampbellreed.org/",
+      "https://originalfreenations.com/"
+  ]
 }
