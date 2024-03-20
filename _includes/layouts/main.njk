@@ -107,6 +107,10 @@
                     <li><a class="fa fa-2x fa-share-square" href="https://threads.net/{{ site.threads_username }}" title="Follow {{site.name}} on threads"><span class="description">Threads</span></a></li>
                     {% endif %}
 
+                    {% if site.buymeacoffee_username %}
+                    <li><a class="fa fa-2x fa-mug-saucer" href="https://buymeacoffee.com/{{ site.bsbuymeacoffee_username }}" title="Follow {{site.name}} on BuyMeACoffee"><span class="description">Buy Me A Coffee</span></a></li>
+                    {% endif %}
+
                     {% if site.bsky_username %}
                     <li><a class="fa fa-2x fa-at" href="https://bsky.app/profile/{{ site.bsky_username }}" title="Follow {{site.name}} on bluesky"><span class="description">Bluesky</span></a></li>
                     {% endif %}
