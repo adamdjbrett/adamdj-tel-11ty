@@ -1,7 +1,7 @@
 # Adam DJ Brett Contact Information
 [adamdj.tel](https://www.adamdj.tel)
 
-[![Build Status](https://travis-ci.org/adamdjbrett/adamdj-tel-11ty.svg?branch=master)](https://travis-ci.org/adamdjbrett/adamdj-tel-11ty)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/828e7d73-20d4-4a60-9897-c7e33baf41d7/deploy-status)](https://app.netlify.com/sites/adamdj-tel/deploys)
 
 ⚠️ WARNING: This is an Educational Project, not ready for production!⚠️
 
