@@ -1,6 +1,5 @@
-/* removed transparent background-color */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: Helvetica,Arial,sans-serif;
     background-color: rgba(0, 0, 0, 0);
     position: absolute;
     top: 0;
@@ -10,53 +9,50 @@ body {
     margin: 0;
 }
 #fullscreen {
-    z-index: -999;
-    min-height: 100%;
-    min-width: 1024px;
-    width: 100%;
-    height: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  position: fixed;
+  z-index: -999;
+  opacity: 0.8;
 }
 #avatar {
     height: 180px;
     border-radius: 100%;
-    border: 5px solid white;
+    border: 3px solid white;
     margin-bottom: 40px;
 }
 h1 {
     color: white;
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: 0.1em;
     font-size: 4em;
-    font-family: 'Arial Bold';
-    font-variant: all-small-caps;
-    font-weight: 700;
+    font-family: Helvetica;
     margin: -10px 0;
 }
 h3 {
     color: white;
     padding-bottom: 20px;
-    font-weight: thin;
+    font-weight: bold;
 }
 .content {
     padding-top: 100px;
-    padding-bottom: 200px;
-    text-align: center;
+    padding-bottom: 40px;
     background-color: rgba(0, 0, 0, 0);
-}
-footer {
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0);
+    text-align: center;
 }
 ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 li {
     border-radius: 100%;
-    border: 2px solid white;
+    border: 2px transparent;
     color: white;
     margin: 8px;
     display: inline-block;
@@ -71,7 +67,7 @@ li:hover {
     -moz-transition: 500ms;
     transition: 500ms;
     text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.25);
 }
 a {
     color: white;
@@ -122,10 +118,12 @@ a:hover {
 .description {
     display: inline-block;
     color: white;
-    font-family: Arial;
+    font-family: Helvetica;
     margin-left: 40px;
+    font-weight: normal;
 }
 .content {
     padding-top: 60px;
 }
 }
+
