@@ -1,7 +1,3 @@
----
-permalink: /BingSiteAuth.xml
-eleventyExcludeFromCollections: true
----
 <?xml version="1.0"?>
 <users>
 	<user>D927D4DCA9938C1F2F92C3D5D6AC8BDF</user>
