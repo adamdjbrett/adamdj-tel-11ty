@@ -9,6 +9,11 @@ export default {
     github_username:  "adamdjbrett",
     favicon: "/img/favicon.ico",
     twitter_username: "__adjb",
+    footer:  {
+		copyrights: "(CC BY 4.0) License",
+		text_link: "Adam DJ Brett",
+		url: "https://www.adamdjbrett.com"
+	},
 	author: {
 		name: "Adam DJ Brett",
 		email: "info@adamdjbrett.com",

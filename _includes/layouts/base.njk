@@ -60,5 +60,6 @@ gtag('config', 'G-PPJZ35N5EP');
 </li>
 {% endfor %}
 </ul>
+<p class="footer-text">{% if metadata.footer.copyrights %}{{metadata.footer.copyrights}}{% endif %} {% if metadata.footer.text_link %}<a class="des" href="{{metadata.footer.url}}">{{metadata.footer.text_link}}</a>{% endif %} , Powered by <a class="des" href="https://11ty.dev">11ty</a></p>
 </body>
 </html>

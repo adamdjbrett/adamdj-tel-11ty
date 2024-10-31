@@ -126,4 +126,5 @@ a:hover {
     padding-top: 60px;
 }
 }
-
+a.des{padding:1px; font-weight:bold;}
+a.footer-text,.footer-text {color:white; padding-top:15px;width:100%;}
