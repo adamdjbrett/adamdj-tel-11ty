@@ -1,7 +1,7 @@
 {
-	"name": "Adam Dj Brett",
+	"name": "Adam DJ Brett",
 	"version": "1.0.1",
-	"description": "New Version of Adam Dj Brett",
+	"description": "New Version of Adam DJ Brett",
 	"type": "module",
 	"scripts": {
 		"build": "npx @11ty/eleventy",

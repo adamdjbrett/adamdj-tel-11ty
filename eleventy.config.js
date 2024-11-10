@@ -63,11 +63,11 @@ export default async function(eleventyConfig) {
 		},
 		metadata: {
 			language: "en",
-			title: "Adam Dj Brett",
+			title: "Adam DJ Brett",
 			subtitle: "I am the grant and event coordinator on the Doctrine of Discovery Project. My PhD is Religion from Syracuse University where I specialized in U.S. religion and the impact of Protestant fundamentalism on religion, politics, and culture.",
 			base: "https://www.adamdj.tel",
 			author: {
-				name: "Adam Dj Brett"
+				name: "Adam DJ Brett"
 			}
 		}
 	});

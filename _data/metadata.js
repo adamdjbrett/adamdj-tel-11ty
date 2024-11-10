@@ -36,23 +36,18 @@ export default {
                 link: "https://twitter.com/__adjb"
               },
               {
-                icon: "codepen",
-                description: "Adam Codepen",
-                link: "https://codepen.io/"
-              },
-              {
                 icon: "linkedin",
-                description: "Adam LinkedIn",
+                description: "Adam on LinkedIn",
                 link: "https://linkedin.com/in/adamdjbrett"
               },
               {
                 icon: "instagram",
-                description: "Adam Instagram",
+                description: "Adam on Instagram",
                 link: "https://instagram.com/__adjb"
               },
               {
                 icon: "header",
-                description: "Adam Mastodon",
+                description: "Adam on Mastodon",
                 link: "https://hcommons.social/@adjb"
               },
               {
@@ -72,12 +67,12 @@ export default {
               },
               {
                 icon: "tags",
-                description: "Adam Blogs",
+                description: "Adam's Blog",
                 link: "https://adjb.co/"
               },
               {
                 icon: "envelope",
-                description: "Adam Email",
+                description: "Adam's Email",
                 link: "mailto:info@adamdjbrett.com"
               },
               {
