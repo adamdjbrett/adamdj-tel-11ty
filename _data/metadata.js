@@ -26,57 +26,57 @@ export default {
                 link: "https://www.adamdjbrett.com"
               },
               {
-                icon: "fab fa-github",
+                icon: "fa-brands fa-github",
                 description: "Follow Adam on Github",
                 link: "https://github.com/adamdjbrett"
               },
               {
-                icon: "twitter",
+                icon: "fa-brands fa-twitter",
                 description: "Adam on Twitter",
                 link: "https://twitter.com/__adjb"
               },
               {
-                icon: "linkedin",
+                icon: "fa-brands fa-linkedin",
                 description: "Adam on LinkedIn",
                 link: "https://linkedin.com/in/adamdjbrett"
               },
               {
-                icon: "instagram",
+                icon: "fa-brands fa-instagram",
                 description: "Adam on Instagram",
                 link: "https://instagram.com/__adjb"
               },
               {
-                icon: "header",
+                icon: "fa-brands fa-mastodon",
                 description: "Adam on Mastodon",
                 link: "https://hcommons.social/@adjb"
               },
               {
-                icon: "share-square",
+                icon: "fa fa-share-square",
                 description: "Adam on Threads",
                 link: "https://threads.net/@__adjb"
               },
               {
-                icon: "coffee",
+                icon: "fa fa-coffee",
                 description: "Adam buy me a coffee",
                 link: "https://buymeacoffee.com/adamdjbrett"
               },
               {
-                icon: "at",
+                icon: "fa-brands fa-bluesky",
                 description: "Adam on Bluesky",
                 link: "https://bsky.app/profile/adjb.bsky.social"
               },
               {
-                icon: "tags",
+                icon: "fa fa-tags",
                 description: "Adam's Blog",
                 link: "https://adjb.co/"
               },
               {
-                icon: "envelope",
+                icon: "fa fa-envelope",
                 description: "Adam's Email",
                 link: "mailto:info@adamdjbrett.com"
               },
               {
-                icon: "address-card",
+                icon: "fa fa-address-card",
                 description: "Adam vcard ",
                 link: "https://www.adamdj.tel/vcard.vcf"
               }
