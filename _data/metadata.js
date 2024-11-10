@@ -21,12 +21,12 @@ export default {
 	},
 	social: [
               {
-                icon: "globe",
+                icon: "fa fa-globe",
                 description: "Main website",
                 link: "https://www.adamdjbrett.com"
               },
               {
-                icon: "github",
+                icon: "fab fa-github",
                 description: "Follow Adam on Github",
                 link: "https://github.com/adamdjbrett"
               },
