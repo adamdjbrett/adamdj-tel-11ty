@@ -22,62 +22,62 @@ export default {
 	social: [
               {
                 icon: "fa fa-globe",
-                description: "Main website",
+                description: "my site",
                 link: "https://www.adamdjbrett.com"
               },
               {
                 icon: "fa-brands fa-github",
-                description: "Follow Adam on Github",
+                description: "Github",
                 link: "https://github.com/adamdjbrett"
               },
               {
                 icon: "fa-brands fa-twitter",
-                description: "Adam on Twitter",
+                description: "Twitter",
                 link: "https://twitter.com/__adjb"
               },
               {
                 icon: "fa-brands fa-linkedin",
-                description: "Adam on LinkedIn",
+                description: "LinkedIn",
                 link: "https://linkedin.com/in/adamdjbrett"
               },
               {
                 icon: "fa-brands fa-instagram",
-                description: "Adam on Instagram",
+                description: "Instagram",
                 link: "https://instagram.com/__adjb"
               },
               {
                 icon: "fa-brands fa-mastodon",
-                description: "Adam on Mastodon",
+                description: "Mastodon",
                 link: "https://hcommons.social/@adjb"
               },
               {
                 icon: "fa fa-share-square",
-                description: "Adam on Threads",
+                description: "Threads",
                 link: "https://threads.net/@__adjb"
               },
               {
                 icon: "fa fa-coffee",
-                description: "Adam buy me a coffee",
+                description: "buy me a coffee",
                 link: "https://buymeacoffee.com/adamdjbrett"
               },
               {
                 icon: "fa-brands fa-bluesky",
-                description: "Adam on Bluesky",
+                description: "Bluesky",
                 link: "https://bsky.app/profile/adjb.bsky.social"
               },
               {
                 icon: "fa fa-tags",
-                description: "Adam's Blog",
+                description: "my Blog",
                 link: "https://adjb.co/"
               },
               {
                 icon: "fa fa-envelope",
-                description: "Adam's Email",
+                description: "my Email",
                 link: "mailto:info@adamdjbrett.com"
               },
               {
                 icon: "fa fa-address-card",
-                description: "Adam vcard ",
+                description: "vcard",
                 link: "https://www.adamdj.tel/vcard.vcf"
               }
     ]
