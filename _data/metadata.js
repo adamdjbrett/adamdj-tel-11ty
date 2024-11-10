@@ -57,7 +57,7 @@ export default {
               },
               {
                 icon: "fa fa-coffee",
-                description: "coffee",
+                description: "Coffee",
                 link: "https://buymeacoffee.com/adamdjbrett"
               },
               {
@@ -67,13 +67,13 @@ export default {
               },
               {
                 icon: "fa fa-tags",
-                description: "my Blog",
+                description: "Blog",
                 link: "https://adjb.co/"
               },
               {
                 icon: "fa fa-envelope",
-                description: "my Email",
-                link: "mailto:info@adamdjbrett.com"
+                description: "Email",
+                link: "mhttps://www.adamdjbrett.com/info/"
               },
               {
                 icon: "fa fa-address-card",
