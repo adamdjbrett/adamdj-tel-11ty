@@ -57,7 +57,7 @@ export default {
               },
               {
                 icon: "fa fa-coffee",
-                description: "buy me a coffee",
+                description: "coffee",
                 link: "https://buymeacoffee.com/adamdjbrett"
               },
               {
