@@ -63,7 +63,7 @@ export default {
               {
                 icon: "fa-brands fa-bluesky",
                 description: "Bluesky",
-                link: "https://bsky.app/profile/adjb.bsky.social"
+                link: "https://bsky.app/profile/adjb.co"
               },
               {
                 icon: "fa fa-tags",
