@@ -4,10 +4,10 @@ export default {
 	language: "en",
 	locale: "en-US",
 	description: "Decoding Religion, Politics, and Culture.",
-	avatar: "/img/avatar.jpg",
-	cover: "/img/web-design-g871abf5a4_1920.jpg",
+	avatar: "/img/avatar2.webp",
+	cover: "/img/web-design-g871abf5a4_1920.webp",
 	github_username:  "adamdjbrett",
-	favicon: "/img/favicon.ico",
+	favicon: "/img/favicon.webp",
 	twitter_username: "__adjb",
 	footer:  {
 		copyrights: "(CC BY 4.0) License",
