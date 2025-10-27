@@ -40,14 +40,10 @@ gtag('config', 'G-PPJZ35N5EP');
 <meta property="og:image:height" content="1080" />
 <meta property="og:image:alt" content="{{metadata.title}}" />
 <meta name="generator" content="{{ eleventy.generator }}"> 
-{% include "fa.njk" %}
 <link rel="stylesheet" href="/css/index.css">
 <link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/404.css">
-<script src="https://kit.fontawesome.com/f7bad4bd2f.js" crossorigin="anonymous"></script>
-<link rel="dns-prefetch" href="https://kit.fontawesome.com/" />
+<link defer rel="stylesheet" href="/css/404.css">
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 <div class="content">
@@ -59,12 +55,14 @@ gtag('config', 'G-PPJZ35N5EP');
 <ul>
 {% for s in metadata.social %}
 <li>
-<a class="{{s.icon}} fa-2x" href="{{s.link}}" aria-hidden="true">
+<a href="{{s.link}}" title="{{s.description}}" aria-label="{{s.description}}"><i  class="{{s.icon}} fa-2x"></i>
 <span class="description">{{s.description}}</span>
 </a>
 </li>
 {% endfor %}
 </ul>
 <p class="footer-text">{% if metadata.footer.copyrights %}{{metadata.footer.copyrights}}{% endif %} {% if metadata.footer.text_link %}<a class="des" href="{{metadata.footer.url}}">{{metadata.footer.text_link}}</a>{% endif %} , Powered by <a class="des" href="https://11ty.dev">11ty</a></p>
+<!-- outputs all the icons used on the page -->
+{% getBundle "fontawesome" %}
 </body>
 </html>

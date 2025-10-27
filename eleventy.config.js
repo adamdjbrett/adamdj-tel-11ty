@@ -8,6 +8,7 @@ import fs from "fs";
 import MinifyCSS from "clean-css";
 import postCSS from 'postcss';
 import purgeCSS from '@fullhuman/postcss-purgecss';
+import pluginFontAwesome from '@11ty/font-awesome'
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
@@ -16,6 +17,15 @@ export default async function(eleventyConfig) {
 		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
 		}
+	});
+	// FontAwesome plugin
+eleventyConfig.addPlugin(pluginFontAwesome, {
+	transform: 'i[class]',
+	shortcode: false,
+	failOnError: true,
+	defaultAttributes: {
+		class: 'icon-svg',
+	},
 	});
 eleventyConfig.addTransform('purge-and-inline-css', async (content, outputPath) => {
   if (process.env.ELEVENTY_ENV !== 'production' || !outputPath.endsWith('.html')) {
