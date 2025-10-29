@@ -47,7 +47,7 @@ gtag('config', 'G-PPJZ35N5EP');
 <meta property="og:image:alt" content="{{metadata.title}}" />
 <meta name="generator" content="{{ eleventy.generator }}"> 
 <!-- capture the CSS content as a Nunjucks variable -->
-{% set css %} {% include "public/css/simplified.css" %} {% endset %}
+{% set css %} {% include "public/css/main.css", "public/css/index.css" %} {% endset %}
 <!-- feed it through our cssmin filter to minify -->
 <style>
 	{{ css | cssmin | safe }}
