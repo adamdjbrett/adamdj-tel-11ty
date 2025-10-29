@@ -31,13 +31,18 @@ p {
 }
 
 /* Link state colors */
+a:link {
+    color: #082840;
+}
+a:active {
+    color: #5f2b48;
+}
+
 a:visited {
     color: #17050F;
 }
 
-a:active {
-    color: #5f2b48;
-}
+
 
 @media only screen and (max-width: 280px) {
     body,
