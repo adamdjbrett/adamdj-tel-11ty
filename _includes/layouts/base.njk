@@ -46,9 +46,12 @@ gtag('config', 'G-PPJZ35N5EP');
 <meta property="og:image:height" content="1080" />
 <meta property="og:image:alt" content="{{metadata.title}}" />
 <meta name="generator" content="{{ eleventy.generator }}"> 
-<link rel="stylesheet" href="/css/index.css">
-<link rel="stylesheet" href="/css/main.css">
-<link defer rel="stylesheet" href="/css/404.css">
+<!-- capture the CSS content as a Nunjucks variable -->
+{% set css %} {% include "public/css/simplified.css" %} {% endset %}
+<!-- feed it through our cssmin filter to minify -->
+<style>
+	{{ css | cssmin | safe }}
+</style>
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
 </head>
 <body>
