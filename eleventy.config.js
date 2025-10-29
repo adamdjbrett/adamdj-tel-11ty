@@ -5,17 +5,10 @@ import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import pluginFilters from "./_config/filters.js";
 import fs from "fs";
-import MinifyCSS from "clean-css";
+import CleanCSS from "clean-css";
 import postCSS from 'postcss';
 import purgeCSS from '@fullhuman/postcss-purgecss';
 import pluginFontAwesome from '@11ty/font-awesome'
-import CleanCSS from "clean-css";
-
-export default function (eleventyConfig) {
-	eleventyConfig.addFilter("cssmin", function (code) {
-		return new CleanCSS({}).minify(code).styles;
-	});
-};
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
@@ -24,6 +17,11 @@ export default async function(eleventyConfig) {
 		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
 		}
+	});
+
+	// CSS minification filter
+	eleventyConfig.addFilter("cssmin", function (code) {
+		return new CleanCSS({}).minify(code).styles;
 	});
 	// FontAwesome plugin
 eleventyConfig.addPlugin(pluginFontAwesome, {
