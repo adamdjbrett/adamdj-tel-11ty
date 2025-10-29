@@ -139,5 +139,18 @@ a:hover {
     padding-top: 60px;
 }
 }
-a.des{padding:1px; font-weight:bold;}
-a.footer-text,.footer-text {color:white; padding-top:15px;width:100%;}
+a.des{padding:1px; font-weight:bold; text-decoration: underline;}
+.footer-text {
+    color:white;
+    padding-top:15px;
+    width:100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 15px;
+}
+.footer-text a {
+    text-decoration: underline;
+}
