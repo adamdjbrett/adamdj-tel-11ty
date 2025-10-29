@@ -33,17 +33,39 @@ eleventyConfig.addPlugin(pluginFontAwesome, {
 	},
 	});
 eleventyConfig.addTransform('purge-and-inline-css', async (content, outputPath) => {
-  if (process.env.ELEVENTY_ENV !== 'production' || !outputPath.endsWith('.html')) {
-    return content;
-  }
+	if (process.env.ELEVENTY_ENV !== 'production' || !outputPath.endsWith('.html')) {
+		return content;
+	}
 
-  const purgeCSSResults = await new PurgeCSS().purge({
-    content: [{ raw: content }],
-    css: ['dist/css/index.css','dist/css/main.css'],
-    keyframes: true,
-  });
+	// Only run when the template explicitly opts-in with a placeholder
+	const placeholder = '<!-- INLINE CSS-->';
+	if (!content.includes(placeholder)) {
+		return content;
+	}
 
-  return content.replace('<!-- INLINE CSS-->', '<style>' + purgeCSSResults[0].css + '</style>');
+	try {
+		// Read CSS from public passthrough (served at /css/*)
+		const cssFiles = ['public/css/index.css', 'public/css/main.css', 'public/css/404.css'].filter(p => fs.existsSync(p));
+		if (cssFiles.length === 0) {
+			return content; // nothing to inline
+		}
+		const rawCss = cssFiles.map(p => fs.readFileSync(p, 'utf8')).join('\n');
+
+		// Purge against the current HTML content
+		const purgeResult = await postCSS([
+			purgeCSS({
+				content: [{ raw: content, extension: 'html' }],
+				keyframes: true,
+			})
+		]).process(rawCss, { from: undefined });
+
+		// Minify and inline
+		const minified = new CleanCSS({}).minify(purgeResult.css || '').styles;
+		return content.replace(placeholder, `<style>${minified}</style>`);
+	} catch (e) {
+		// Fail-safe: don't break the build if purge/minify fails
+		return content;
+	}
 });
 	eleventyConfig
 		.addPassthroughCopy({
