@@ -30,6 +30,15 @@ p {
     width: 280px;
 }
 
+/* Link state colors */
+a:visited {
+    color: #17050F;
+}
+
+a:active {
+    color: #5f2b48;
+}
+
 @media only screen and (max-width: 280px) {
     body,
     p {
