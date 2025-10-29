@@ -4,7 +4,7 @@
 }
 
 html {
-    color: #111111;
+    color: #ffffff;
     display: table;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     height: 100%;
@@ -16,10 +16,12 @@ body {
     display: table-cell;
     vertical-align: middle;
     margin: 2em auto;
+    background-color: #15202B;
 }
 
 h1 {
-    color: ##0f0f0f font-weight: 700;
+    color: #ffffff;
+    font-weight: 700;
     font-size: 2em;
 }
 
