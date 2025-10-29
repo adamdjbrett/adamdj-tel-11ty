@@ -9,6 +9,13 @@ import MinifyCSS from "clean-css";
 import postCSS from 'postcss';
 import purgeCSS from '@fullhuman/postcss-purgecss';
 import pluginFontAwesome from '@11ty/font-awesome'
+import CleanCSS from "clean-css";
+
+export default function (eleventyConfig) {
+	eleventyConfig.addFilter("cssmin", function (code) {
+		return new CleanCSS({}).minify(code).styles;
+	});
+};
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
