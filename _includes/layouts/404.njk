@@ -16,7 +16,7 @@ This will work for both GitHub pages and Netlify:
     <title>{{site.title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- capture the CSS content as a Nunjucks variable -->
-{% set css %} {% include "/css/404.css" %} {% endset %}
+{% set css %} {% include "public/css/404.css" %} {% endset %}
 <!-- feed it through our cssmin filter to minify -->
 <style>
 	{{ css | cssmin | safe }}
