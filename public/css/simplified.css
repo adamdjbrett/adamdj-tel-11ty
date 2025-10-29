@@ -87,6 +87,13 @@ a:active {
     width: 40px;
     margin: auto;
 }
+.footy {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
 @media (max-width: 450px) {
     ul {
         text-align: center;
