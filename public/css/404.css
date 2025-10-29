@@ -32,14 +32,14 @@ p {
 
 /* Link state colors */
 a:link {
-    color: #082840;
+    color: #0074D9;
 }
 a:active {
-    color: #5f2b48;
+    color: #7FDBFF;
 }
 
 a:visited {
-    color: #17050F;
+    color: #800080;
 }
 
 
