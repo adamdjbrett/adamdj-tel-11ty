@@ -59,8 +59,8 @@ gtag('config', 'G-PPJZ35N5EP');
 </head>
 <body>
 <div class="content">
-{% if metadata.cover %}<img src="{{metadata.cover}}" alt="{{metadata.title}}" id="fullscreen">{% endif %}
-{% if metadata.avatar %}<img src="{{metadata.avatar}}" alt="{{metadata.title}}" id="avatar" width="180px" height="180px">{% endif %}
+{% if metadata.cover %}<img src="{{metadata.cover}}" alt="{{metadata.title}}" id="fullscreen" fetchpriority="high">{% endif %}
+{% if metadata.avatar %}<img src="{{metadata.avatar}}" alt="{{metadata.title}}" id="avatar" width="180px" height="180px" fetchpriority="high">{% endif %}
 <h1>{{metadata.title}}</h1><br/>
 <h2 style="color:white; padding:8px;">{{metadata.description}}</h2>
 </div>
