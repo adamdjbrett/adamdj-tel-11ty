@@ -47,6 +47,7 @@ gtag('config', 'G-PPJZ35N5EP');
 <meta property="og:image:alt" content="{{metadata.title}}" />
 <meta name="generator" content="{{ eleventy.generator }}"> 
 <link rel="dns-prefetch" href="https://static.cloudflareinsights.com/" />
+
 <!-- capture the CSS content as a Nunjucks variable -->
 {% set css %} {% include "public/css/simplified.css" %} {% endset %}
 <!-- feed it through our cssmin filter to minify -->
@@ -56,6 +57,8 @@ gtag('config', 'G-PPJZ35N5EP');
 <!-- <link prefetch rel="stylesheet" href="/css/index.css">
 <link prefetch rel="stylesheet" href="/css/main.css"> -->
 <!-- <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" /> -->
+{# SEO metadata and structured data #}
+{% include "seo.njk" %}
 </head>
 <body>
 <div class="content">
