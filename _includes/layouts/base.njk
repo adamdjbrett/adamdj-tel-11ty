@@ -67,6 +67,7 @@ gtag('config', 'G-PPJZ35N5EP');
 <h1>{{metadata.title}}</h1><br/>
 <h2 style="color:white; padding:8px;">{{metadata.description}}</h2>
 </div>
+<div class="button-text">
 <ul>
 {% for s in metadata.social %}
 <li>
@@ -76,8 +77,9 @@ gtag('config', 'G-PPJZ35N5EP');
 </li>
 {% endfor %}
 </ul>
- <hr class="footer-padding" />
-<p class="footer-text">{% if metadata.footer.copyrights %}{{metadata.footer.copyrights}}{% endif %} {% if metadata.footer.text_link %}<a class="des" href="{{metadata.footer.url}}">{{metadata.footer.text_link}}</a>{% endif %} , Powered by <a class="des" href="https://11ty.dev">11ty</a></p>
+</div>
+ <footer>
+<p class="footer-text">{% if metadata.footer.copyrights %}{{metadata.footer.copyrights}}{% endif %} {% if metadata.footer.text_link %}<a class="des" href="{{metadata.footer.url}}">{{metadata.footer.text_link}}</a>{% endif %} , Powered by <a class="des" href="https://11ty.dev">11ty</a></p></footer>
 <!-- outputs all the icons used on the page -->
 {% getBundle "fontawesome" %}
 </body>

@@ -22,7 +22,7 @@ export default {
 	social: [
               {
                 icon: "fa-solid fa-globe",
-                description: "my site",
+                description: "My Site",
                 link: "https://www.adamdjbrett.com"
               },
               {
@@ -77,7 +77,7 @@ export default {
               },
               {
                 icon: "fa-solid fa-address-card",
-                description: "vcard",
+                description: "vCard",
                 link: "https://www.adamdj.tel/vcard.vcf"
               }
     ]

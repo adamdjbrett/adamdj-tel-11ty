@@ -1,4 +1,5 @@
 import { IdAttributePlugin, InputPathToUrlTransformPlugin, HtmlBasePlugin } from "@11ty/eleventy";
+import htmlmin from "html-minifier-terser";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
@@ -32,6 +33,23 @@ eleventyConfig.addPlugin(pluginFontAwesome, {
 		class: 'icon-svg',
 	},
 	});
+// HTML minification transform
+eleventyConfig.addTransform('htmlmin', async (content, outputPath) => {
+	if (outputPath && outputPath.endsWith('.html')) {
+		try {
+			return await htmlmin.minify(content, {
+				removeComments: true,
+				collapseWhitespace: true,
+				minifyJS: true,
+				minifyCSS: true,
+			});
+		} catch (e) {
+			return content;
+		}
+	}
+	return content;
+});
+
 eleventyConfig.addTransform('purge-and-inline-css', async (content, outputPath) => {
 	if (process.env.ELEVENTY_ENV !== 'production' || !outputPath.endsWith('.html')) {
 		return content;
@@ -71,7 +89,10 @@ eleventyConfig.addTransform('purge-and-inline-css', async (content, outputPath) 
 		.addPassthroughCopy({
 			"./public/": "/"
 		})
-		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
+		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl")
+		.addPassthroughCopy({
+			"./public/img/favicon/favicon.ico": "favicon.ico"
+		});
 
 	// Run Eleventy when these files change:
 	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets

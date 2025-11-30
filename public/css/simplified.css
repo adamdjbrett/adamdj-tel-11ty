@@ -452,7 +452,7 @@ body {
 	height: 180px;
 	border-radius: 100%;
 	border: 3px solid white;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 }
 
 h1 {
@@ -494,7 +494,6 @@ li {
 	list-style: none;
 	width: 65px;
 	height: 65px;
-	rgba(0, 0, 0, 0.25);
 	vertical-align: middle;
 }
 
@@ -522,22 +521,23 @@ a {
 	display: block;
 	height: 40px;
 	width: 40px;
-	margin: auto;
+	margin: inherit;
 }
 
 @media (max-width:450px) {
 	ul {
 		text-align: center;
+        display: block;
+        margin: 0 auto;
 	}
 
 	li {
 		border-radius: 0%;
 		border: none;
 		color: white;
-		margin: 8px;
 		display: block;
 		list-style: none;
-		margin: 10px 0px;
+		margin: 10px 10px;
 		text-align: center;
 		height: auto;
 		width: auto;
@@ -548,17 +548,25 @@ a {
 		transition: none;
 	}
 
-	a {
-		text-align: justify;
+	li > a {
+		display: flex;
+		align-items: center;
+		gap: 0;
+		text-align: left;
 		border: 2px solid white;
 		border-radius: 5px;
 		color: white;
 		padding: 15px;
 		padding-left: 30px;
-		width: 70%;
+		justify-content: flex-start;
 	}
 
-	a:hover {
+	li > a .button-text {
+		text-align: left;
+		flex: 1;
+	}
+
+	li > a:hover {
 		-webkit-transition: 500ms;
 		-moz-transition: 500ms;
 		transition: 500ms;
@@ -588,7 +596,7 @@ a.des {
 a.footer-text,
 .footer-text {
 	color: white;
-	padding-top: 15px;
+	padding-top: 30px;
 	width: 100%;
 }
 
@@ -603,7 +611,7 @@ a.des {
 	padding-top: 15px;
 	width: 100%;
 	text-align: center;
-	position: fixed;
+	position: relative;
 	bottom: 0;
 	left: 0;
 	right: 0;
