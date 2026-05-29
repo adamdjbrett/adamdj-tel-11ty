@@ -3,16 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ title or metadata.title }}</title>
-<meta name="description" content="{{ description or metadata.description }}">
-<link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
-<link rel="canonical" href="{{metadata.url}}">
+{% set pageTitle = title or metadata.title %}
+{% set metaTitle %}{% if page.url == "/" %}{{ pageTitle }}{% else %}{{ pageTitle }} | {{ metadata.siteName or metadata.title }}{% endif %}{% endset %}
+{% set metaDescription = description or metadata.description %}
+{% set canonicalUrl %}{{ page.url | htmlBaseUrl(metadata.url) }}{% endset %}
+<title>{{ metaTitle }}</title>
+<meta name="description" content="{{ metaDescription }}">
+<meta name="title" content="{{ metaTitle }}">
+<link rel="canonical" href="{{ canonicalUrl }}">
 <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.webp" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg" />
 <link rel="shortcut icon" href="/img/favicon/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.webp" />
 <meta name="apple-mobile-web-app-title" content="adamdj.tel" />
-<link rel="manifest" href="/img/favicon/site.webmanifest" />
+<link rel="manifest" href="/site.webmanifest" />
 {% if site.favicon_img %}
 <link rel="shortcut icon" href="{{metadata.favicon}}" />
 {% endif %}
@@ -25,26 +29,27 @@ gtag('js', new Date());
 gtag('config', 'G-PPJZ35N5EP');
 </script>
 -->
-<meta name="twitter:title" content="{{metadata.title}}">
-<meta name="twitter:description" content="{{ metadata.description }}">
+<meta name="twitter:title" content="{{ metaTitle }}">
+<meta name="twitter:description" content="{{ metaDescription }}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{{ metadata.avatar }}">
-<meta name="twitter:site" content="@{{ site.twitter_username }}">
-<meta name="twitter:creator" content="@{{ site.twitter_username }}">
+<meta name="twitter:site" content="@{{ metadata.twitter_username }}">
+<meta name="twitter:creator" content="@{{ metadata.twitter_username }}">
 <meta property="og:locale" content="en_US">
-<meta property="og:type" content="article">
-<meta property="og:title" content="{{metadata.title}}">
-<meta property="og:description" content="{{ metadata.description }}">
-<meta property="og:url" content="{{ metadata.url }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ metaTitle }}">
+<meta property="og:description" content="{{ metaDescription }}">
+<meta property="og:url" content="{{ canonicalUrl }}">
 <meta property="fb:admins" content="adamdjbrett"/>
 <meta property="fb:app_id" content="138858296188819"/>
-<meta property="og:site_name" content="{{ metadata.title }}">
+<meta property="og:site_name" content="{{ metadata.siteName or metadata.title }}">
 <meta property="og:image" content="{{ metadata.avatar }}">
 <meta property="og:image" content="{{metadata.avatar}}" />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="1920" />
 <meta property="og:image:height" content="1080" />
-<meta property="og:image:alt" content="{{metadata.title}}" />
+<meta property="og:image:alt" content="{{ metadata.siteName or metadata.title }}" />
+<meta content="{% if noindex %}noindex, follow{% else %}index, follow{% endif %}" name="robots">
 <meta name="generator" content="{{ eleventy.generator }}"> 
 <link rel="dns-prefetch" href="https://static.cloudflareinsights.com/" />
 
@@ -64,8 +69,11 @@ gtag('config', 'G-PPJZ35N5EP');
 <div class="content">
 {% if metadata.cover %}<img src="{{metadata.cover}}" alt="{{metadata.title}}" id="fullscreen" fetchpriority="high">{% endif %}
 {% if metadata.avatar %}<img src="{{metadata.avatar}}" alt="{{metadata.title}}" id="avatar" width="180px" height="180px" fetchpriority="high">{% endif %}
-<h1>{{metadata.title}}</h1><br/>
-<h2 style="color:white; padding:8px;">{{metadata.description}}</h2>
+<h1>{{ metadata.siteName or metadata.title }}</h1>
+<p class="tagline">{{ metadata.tagline }}</p>
+<div class="profile-summary">
+{{ content | safe }}
+</div>
 </div>
 <div class="button-text">
 <ul>

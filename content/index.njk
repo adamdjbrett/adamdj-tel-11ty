@@ -1,0 +1,18 @@
+---
+title: "Adam DJ Brett Academic Profile, Scholarship, and Digital Humanities Links"
+description: "Adam DJ Brett is a religion scholar, educator, web developer, and public humanities collaborator working across religion in the Americas, Indigenous studies, digital humanities, and culture."
+---
+
+<section class="intro" aria-labelledby="profile-heading">
+  <h2 id="profile-heading">Religion scholar, public humanities collaborator, and web developer</h2>
+  <p>{{ metadata.summary }}</p>
+</section>
+
+<section class="profile-highlights" aria-labelledby="work-heading">
+  <h2 id="work-heading">Research, teaching, and digital work</h2>
+  <ul>
+  {% for item in metadata.highlights %}
+    <li>{{ item }}</li>
+  {% endfor %}
+  </ul>
+</section>

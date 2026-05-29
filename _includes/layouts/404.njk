@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{site.og_locale}}">
+<html lang="{{ metadata.language }}">
 <!--
 
 Read more: https://www.11ty.dev/docs/quicktips/not-found/
@@ -13,7 +13,9 @@ This will work for both GitHub pages and Netlify:
 
 <head>
     <meta charset="utf-8">
-    <title>{{site.title}}</title>
+    <title>{{ title or "Page Not Found" }} | {{ metadata.siteName or metadata.title }}</title>
+    <meta name="description" content="{{ description or metadata.description }}">
+    <meta name="robots" content="noindex, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- capture the CSS content as a Nunjucks variable -->
 {% set css %} {% include "public/css/404.css" %} {% endset %}
@@ -26,7 +28,7 @@ This will work for both GitHub pages and Netlify:
 </head>
 <body>
     <h1>Page Not Found</h1>
-    <p><a href="/" title="{{site.title}}" rel="noopener">⬅︎ Return Home</a>.</p>
+    <p><a href="/" title="{{ metadata.siteName or metadata.title }}" rel="noopener">Return Home</a>.</p>
     <p>&nbsp;</p>
     <footer>Built with <a href="http://11ty.dev" rel="noopener">Eleventy</a>.</footer>
 <!-- outputs all the icons used on the page -->

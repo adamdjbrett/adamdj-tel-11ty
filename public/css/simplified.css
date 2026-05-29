@@ -458,10 +458,17 @@ body {
 h1 {
 	color: white;
 	font-weight: normal;
-	letter-spacing: 0.1em;
-	font-size: 4em;
+	letter-spacing: 0.03em;
+	font-size: 3.6em;
 	font-family: Helvetica, Arial, sans-serif;
 	margin: -10px 0;
+}
+
+h2 {
+	color: white;
+	font-size: 1.4em;
+	line-height: 1.25;
+	margin: 0 0 14px;
 }
 
 h3 {
@@ -475,6 +482,56 @@ h3 {
 	padding-bottom: 40px;
 	background-color: rgba(0, 0, 0, 0);
 	text-align: center;
+}
+
+.tagline {
+	color: white;
+	font-size: 1.35em;
+	line-height: 1.35;
+	margin: 22px auto 0;
+	max-width: 760px;
+	padding: 0 20px;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.profile-summary {
+	color: white;
+	font-size: 1.05em;
+	line-height: 1.55;
+	margin: 26px auto 0;
+	max-width: 860px;
+	padding: 0 24px;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+}
+
+.profile-summary p {
+	margin: 0 auto 16px;
+	max-width: 780px;
+}
+
+.profile-summary ul {
+	display: grid;
+	gap: 12px;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	margin: 8px auto 0;
+	max-width: 860px;
+	text-align: left;
+}
+
+.profile-summary li {
+	background-color: rgba(0, 0, 0, 0.42);
+	border: 1px solid rgba(255, 255, 255, 0.22);
+	border-radius: 6px;
+	display: block;
+	height: auto;
+	line-height: 1.45;
+	margin: 0;
+	padding: 16px;
+	width: auto;
+}
+
+.profile-summary li:hover {
+	background-color: rgba(0, 0, 0, 0.52);
 }
 
 ul {
@@ -585,6 +642,29 @@ a {
 
 	.content {
 		padding-top: 60px;
+	}
+
+	h1 {
+		font-size: 2.4em;
+	}
+
+	h2 {
+		font-size: 1.15em;
+	}
+
+	.tagline,
+	.profile-summary {
+		font-size: 1em;
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	.profile-summary ul {
+		display: block;
+	}
+
+	.profile-summary li {
+		margin-bottom: 12px;
 	}
 }
 
