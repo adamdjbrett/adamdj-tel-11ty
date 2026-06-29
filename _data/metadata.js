@@ -79,6 +79,11 @@ export default {
                 link: "https://adjb.co/"
               },
               {
+                icon: "fa-solid fa-book",
+                description: "Spine and Style Book Reviews",
+                link: "https://lemma.pub/did:plc:3vmq5usrh3yvhbrrzf4ymo23/pub/3mpfn7klatsip"
+              },
+              {
                 icon: "fa-solid fa-envelope",
                 description: "Email",
                 link: "https://www.adamdjbrett.com/info/"
